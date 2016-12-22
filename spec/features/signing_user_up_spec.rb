@@ -11,6 +11,7 @@ RSpec.feature "Signing up a user" do
     click_button "Sign up"
     
     expect(page).to have_content("You have signed up successfully.")
+    expect(page).to have_link("Log Out")
   end
   
   scenario "with invalid credentials" do
@@ -22,6 +23,6 @@ RSpec.feature "Signing up a user" do
     fill_in "Password confirmation", with: "wordpass"
     click_button "Sign up"
     
-    expect(page).to have_content("errors prohibited")
+    expect(page).to have_content("error")
   end
 end
