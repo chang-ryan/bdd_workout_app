@@ -9,9 +9,24 @@
   </head>
 
   <body>
-    <%= link_to "Home", root_path %>
-    <%= link_to "Athlete's Den", root_path %>
-    
-    <%= yield %>
+    <header role="banner">
+      <nav class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <%= link_to, "Get Swole Land", root_path, class: "navbar-brand" %>
+          </div>
+        </div>
+      </nav>
+      <div class="navbar-collapse collapse">
+        <ul class="nav navbar-nav">
+          <li class="">
+            <%= link_to "Home", root_path %>
+          </li>
+        </ul>
+      </div>
+    </header>
+    <div class="container">
+      <%= yield %>
+    </div>
   </body>
 </html>
